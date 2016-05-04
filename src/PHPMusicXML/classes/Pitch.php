@@ -1,4 +1,5 @@
 <?php
+namespace ianring;
 
 class Pitch {
 	
@@ -58,7 +59,7 @@ class Pitch {
 
 	public function toXML() {
 		if ($this->properties['octave'] == null) {
-			throw new Exception('heightless pitches can not be rendered as XML. Provide an "octave" property. '.print_r($this->properties, true));
+			throw new \Exception('heightless pitches can not be rendered as XML. Provide an "octave" property. '.print_r($this->properties, true));
 		}
 
 		$out = '<pitch>';

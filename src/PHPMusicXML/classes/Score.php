@@ -1,4 +1,5 @@
 <?php
+namespace ianring;
 
 class Score {
 
@@ -24,13 +25,13 @@ class Score {
 	function setAttribute($property) {
 
 	}
-
+        //HACKHACKHACK: I just change the version mnumber from 3.0 to 2.0 so sibelius wouldn't yell at me.
 	function toXML($wise = 'partwise') {
 		$out = '';
 		$out .= '<?xml version="1.0" encoding="UTF-8" standalone="no"?>';
-		$out .= '<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">';
+		$out .= '<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 2.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">';
 
-		$out .= '<score-partwise version="3.0">';
+		$out .= '<score-partwise version="2.0">';
 
 		$out .= '<part-list>';
 		foreach ($this->parts as $key => $part) {

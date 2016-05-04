@@ -1,4 +1,5 @@
 <?php
+namespace ianring;
 
 class Direction {
 
